@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    // A/B 랜덤 분기 (50:50)
+    const variant = Math.random() < 0.5 ? "A" : "B";
+
+    // localStorage 저장 (유저 고정)
+    localStorage.setItem("ab_variant", variant);
+
+    if (variant === "A") {
+      window.location.href = "a.html";
+    } else {
+      window.location.href = "b.html";
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
