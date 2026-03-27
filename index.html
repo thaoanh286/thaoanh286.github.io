@@ -1,0 +1,116 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>D'Alba A/B Test</title>
+
+<style>
+body {
+  font-family: 'Arial';
+  margin: 0;
+  background: #f4f6f8;
+}
+
+header {
+  background: #111;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.section {
+  background: white;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+.ab-box {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>D'Alba 미스트 A/B 테스트</h1>
+  <p>광고 메시지 효과 비교 연구</p>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2>연구 개요</h2>
+    <p>
+      본 연구는 광고 메시지 유형(문제 제시형 vs 효과 강조형)이
+      소비자의 구매 전환에 미치는 영향을 분석하기 위해 설계되었다.
+    </p>
+  </div>
+
+  <div class="section ab-box">
+
+    <div class="card">
+      <h3>문제 제시형</h3>
+      <p>
+        건조한 피부, 들뜬 메이크업…<br>
+        피부 고민을 느끼고 계신가요?<br><br>
+        d'Alba 미스트로 지금 해결하세요.
+      </p>
+      <button onclick="track('A')">자세히 보기</button>
+    </div>
+
+    <div class="card">
+      <h3>효과 강조형</h3>
+      <p>
+        7일 사용 후 피부 변화 경험!<br>
+        촉촉함 + 광채 피부 완성<br><br>
+        지금 바로 확인하세요.
+      </p>
+      <button onclick="track('B')">지금 구매</button>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>실험 목적</h2>
+    <ul>
+      <li>문제 제시형 → 고객 유입 확대</li>
+      <li>효과 강조형 → 구매 전환 증가</li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+function track(type) {
+  alert(type + " 광고 클릭");
+  console.log("Clicked:", type);
+}
+</script>
+
+</body>
+</html>
